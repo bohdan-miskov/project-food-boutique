@@ -43,6 +43,12 @@ export default defineConfig(({ command }) => {
       SortCss({
         sort: 'mobile-first',
       }),
+      eslint({
+        cache: false,
+      }),
+      stylelint({
+        fix: true,
+      }),
     ],
   };
 });
