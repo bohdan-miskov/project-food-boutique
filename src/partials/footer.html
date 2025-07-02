@@ -49,7 +49,14 @@
     </p>
     <p class="footer-lead">Subscribe and learn about new products!</p>
     <form action="#" class="footer-form">
-      <input type="email" class="footer-form-input" placeholder="Email" />
+      <input
+        type="email"
+        class="footer-form-input"
+        name="userEmail"
+        placeholder="Email"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        required
+      />
       <button type="submit" class="footer-form-btn">Send</button>
     </form>
     <p class="footer-ending-text">Food Boutique. All rights reserved.</p>

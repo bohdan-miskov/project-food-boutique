@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "tsc && vite build --base=/team-project-food-boutique/",
     "preview": "vite preview",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint \"**/*.css\" --fix"
@@ -24,6 +24,7 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.10.0",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
