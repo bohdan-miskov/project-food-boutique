@@ -41,6 +41,13 @@ a {
   line-height: 1.29;
   color: var(--light-main-color);
 }
+input,
+select {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--main-color);
+}
 /* #endregion */
 /* #region tablet */
 @media only screen and (min-width: 768px) {

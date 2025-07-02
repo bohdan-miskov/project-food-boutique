@@ -19,12 +19,13 @@ ul {
 }
 
 a {
-  color: currentColor;
+  color: currentcolor;
   text-decoration: none;
 }
 
 button {
   cursor: pointer;
+  padding: 0;
 }
 
 img {
