@@ -1,0 +1,60 @@
+.discount-products {
+  padding: 40px 0 80px;
+}
+
+.discount-products-title {
+  margin-bottom: 20px;
+}
+.discount-products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.discount-products-item {
+  padding: 16px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+}
+.discount-products-item-image-container {
+  position: relative;
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  margin-bottom: 24px;
+}
+.discount-products-item-discount-image {
+  position: absolute;
+  top: -13px;
+  right: -5px;
+}
+.discount-products-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.discount-products-item-buy-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.discount-products-item-price {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+  color: var(--main-color);
+}
+.discount-products-item-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 8px;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount-products-item-btn-icon {
+  fill: var(--light-main-color);
+}

@@ -1,9 +1,11 @@
+@import url('./variables.css');
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
+@import url('./typography.css');
 
 /* Sections style */
 @import url('./header.css');
-@import url('./cart/cart.css');
+@import url('./cart.css');
 @import url('./footer.css');
