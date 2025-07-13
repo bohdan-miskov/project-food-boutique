@@ -1,16 +1,27 @@
 <header class="header">
   <div class="container header-container">
-    <img src="img/logo.svg" alt="logo" width="154" height="28" />
+    <img
+      class="header-logo"
+      src="img/logo.svg"
+      alt="logo"
+      width="154"
+      height="28"
+    />
     <nav class="header-nav">
       <ul class="header-nav-list">
         <li class="header-nav-item">
           <a href="../index.html" class="header-nav-link">Home</a>
         </li>
         <li class="header-nav-item">
-          <a href="../cart-page.html" class="header-nav-link"
-            ><svg class="header-cart-icon" width="14" height="14">
-              <use href="img/icons.svg#cart-icon"></use>
-            </svg>
+          <a href="../cart-page.html" class="header-nav-link">
+            <div class="header-nav-link-cart">
+              <svg class="header-cart-icon" width="14" height="14">
+                <use href="img/icons.svg#cart-icon"></use>
+              </svg>
+            </div>
+            <p class="header-cart-info">
+              Cart (<span class="header-cart-info-value"></span>)
+            </p>
           </a>
         </li>
       </ul>

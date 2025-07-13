@@ -1,3 +1,4 @@
+/* #region Phone styles */
 .discount-products {
   padding: 40px 0 80px;
 }
@@ -58,3 +59,52 @@
 .discount-products-item-btn-icon {
   fill: var(--light-main-color);
 }
+/* #endregion */
+
+/* #region Tablet styles */
+@media only screen and (min-width: 768px) {
+  .discount-products {
+    padding: 32px 0 100px;
+  }
+
+  .discount-products-list {
+    flex-direction: row;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .discount-products-item {
+    width: 336px;
+  }
+  .discount-products-item-image-container {
+    margin-bottom: 20px;
+  }
+  .discount-products-item-image {
+    width: 114px;
+    height: 114px;
+  }
+  .discount-products-item-price {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* #endregion */
+
+/* #region Desktop styles */
+@media only screen and (min-width: 1440px) {
+  .discount-products {
+    padding: 20px 0 0;
+  }
+  .discount-products-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  .discount-products-item {
+    width: 275px;
+  }
+  .discount-products-item-image {
+    width: 105px;
+    height: 105px;
+  }
+}
+/* #endregion */

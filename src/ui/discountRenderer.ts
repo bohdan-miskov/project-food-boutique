@@ -1,23 +1,18 @@
-import axios from 'axios';
+import { getDiscountProducts } from '../api/productsApi';
 import { Product } from '../type/products';
 
-const populateDiscountProductsList = async () => {
+export const populateDiscountProductsList = async (count = -1) => {
   const products = await getDiscountProducts();
+
+  const usedProducts =
+    count === -1 ? products.slice(0) : products.slice(0, count);
   const productsList = document.querySelector(
     '.discount-products-list'
   ) as HTMLElement;
 
-  products.forEach(product =>
+  usedProducts.forEach(product =>
     productsList.appendChild(createPopularProductsItem(product))
   );
-};
-
-const getDiscountProducts = async () => {
-  const response = await axios.get<Product[]>(
-    'https://food-boutique.b.goit.study/api/products/discount'
-  );
-
-  return response.data;
 };
 
 const createPopularProductsItem = ({
@@ -45,9 +40,7 @@ const createPopularProductsItem = ({
   const priceEl = clone.querySelector(
     '.discount-products-item-price'
   ) as HTMLElement;
-  priceEl.textContent = price + '$';
+  priceEl.textContent = '$' + price;
 
   return clone;
 };
-
-populateDiscountProductsList();

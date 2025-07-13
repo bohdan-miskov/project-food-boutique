@@ -19,13 +19,17 @@
     <main>
       <load src="./partials/hero.html" />
       <load src="./partials/filters.html" />
-      <load src="./partials/products.html" />
-      <load src="./partials/popular-products.html" />
-      <load src="./partials/discount-products.html" />
+      <div class="catalogs-container">
+        <load src="./partials/products-catalog.html" />
+        <div class="catalog-side-bar-container">
+          <load src="./partials/popular-products.html" />
+          <load src="./partials/discount-products.html" />
+        </div>
+      </div>
     </main>
 
     <load src="./partials/footer.html" />
 
-    <script type="module" src="./home-page.ts"></script>
+    <script type="module" defer src="./home-page.ts"></script>
   </body>
 </html>

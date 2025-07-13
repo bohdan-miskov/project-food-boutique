@@ -8,3 +8,18 @@ export type Product = {
   is10PercentOff: boolean;
   popularity: number;
 };
+
+export type ProductsResponse = {
+  results: Product[];
+  totalPages: number;
+};
+
+export type OptionsApi = {
+  keyword: string;
+  page: number;
+  limit: number;
+  category?: string;
+  byABC?: boolean;
+  byPrice?: boolean;
+  byPopularity?: boolean;
+};

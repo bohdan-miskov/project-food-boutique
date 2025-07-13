@@ -1,3 +1,3 @@
-import './ts/header';
-import './ts/cart';
-import './ts/footer';
+import './tsSections/header';
+import './tsSections/cart';
+import './tsSections/footer';

@@ -1,23 +1,17 @@
-import axios from 'axios';
+import { getPopularProducts } from '../api/productsApi';
 import { Product } from '../type/products';
 
-const populatePopularProductsList = async () => {
+export const populatePopularProductsList = async (count = -1) => {
   const products = await getPopularProducts();
+  const usedProducts =
+    count === -1 ? products.slice(0) : products.slice(0, count);
   const popularProductsList = document.querySelector(
     '.popular-products-list'
   ) as HTMLElement;
 
-  products.forEach(product =>
+  usedProducts.forEach(product =>
     popularProductsList.appendChild(createPopularProductsItem(product))
   );
-};
-
-const getPopularProducts = async () => {
-  const response = await axios.get<Product[]>(
-    'https://food-boutique.b.goit.study/api/products/popular'
-  );
-
-  return response.data;
 };
 
 const createPopularProductsItem = ({
@@ -45,13 +39,11 @@ const createPopularProductsItem = ({
   titleEl.textContent = name;
 
   const valuesEls = clone.querySelectorAll(
-    'popular-products-item-descr-item-value'
+    '.popular-products-item-descr-item-value'
   ) as NodeListOf<HTMLElement>;
-  valuesEls[0].textContent = category;
+  valuesEls[0].textContent = category.split('_').join(' ');
   valuesEls[1].textContent = size;
   valuesEls[2].textContent = String(popularity);
 
   return clone;
 };
-
-populatePopularProductsList();

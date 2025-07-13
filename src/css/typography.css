@@ -76,5 +76,10 @@ select {
     font-size: 18px;
     line-height: 1.33;
   }
+  input,
+  select {
+    font-size: 18px;
+    line-height: 1.33;
+  }
 }
 /* #endregion */
