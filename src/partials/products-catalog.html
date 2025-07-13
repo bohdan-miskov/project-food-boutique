@@ -1,0 +1,96 @@
+<section class="products">
+  <div class="container">
+    <h2 class="products-title visually-hidden">Products catalog</h2>
+    <ul class="products-list"></ul>
+    <ul class="products-pagination-container">
+      <li class="products-pagination-side-item">
+        <ul class="products-pagination-left-side">
+          <li class="products-pagination-left-side-items">
+            <button type="button" class="product-pagination-nav-btn all">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="img/icons.svg#pagin-caret-left-all-icon"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="products-pagination-left-side-items">
+            <button type="button" class="product-pagination-nav-btn once">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="img/icons.svg#pagin-caret-left-once-icon"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class="products-pagination-side-item">
+        <ul class="products-pagination-center-side"></ul>
+      </li>
+      <li class="products-pagination-side-item">
+        <ul class="products-pagination-right-side">
+          <li class="products-pagination-right-side-items">
+            <button type="button" class="product-pagination-nav-btn once">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="img/icons.svg#pagin-caret-right-once-icon"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="products-pagination-right-side-items">
+            <button type="button" class="product-pagination-nav-btn all">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="img/icons.svg#pagin-caret-right-all-icon"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<template id="products-card-template">
+  <li class="products-item">
+    <div class="products-item-image-container">
+      <img src="" alt="" class="products-item-image" width="140" height="140" />
+      <div class="products-item-discount"></div>
+    </div>
+    <h3 class="products-subtitle">Baby Plum Tomatoes</h3>
+    <ul class="products-item-decsr-list">
+      <li class="products-item-descr-item">
+        Category:<span class="products-item-descr-item-value"
+          >Fresh Produce</span
+        >
+      </li>
+      <li class="products-item-descr-item">
+        Size:
+        <span class="products-item-descr-item-value">200 g</span>
+      </li>
+      <li class="products-item-descr-item">
+        Popularity:
+        <span class="products-item-descr-item-value">0</span>
+      </li>
+    </ul>
+    <div class="products-item-footer">
+      <p class="products-item-price">$3.99</p>
+      <button type="button" class="products-item-btn">
+        <svg class="products-item-btn-icon" width="18" height="18">
+          <use href="img/icons.svg#cart-icon"></use>
+        </svg>
+      </button>
+    </div>
+  </li>
+</template>

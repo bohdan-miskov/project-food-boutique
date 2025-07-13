@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { subscribe } from '../api/subscriptionApi';
 
 const handleSubmitSubscribing = async (e: Event) => {
   e.preventDefault();
@@ -6,12 +6,8 @@ const handleSubmitSubscribing = async (e: Event) => {
   const data = new FormData(form);
 
   await subscribe(data.get('userEmail') as string);
-};
 
-const subscribe = async (email: string) => {
-  await axios.post('https://food-boutique.b.goit.study/api/subscription', {
-    email,
-  });
+  form.reset();
 };
 
 const subscribingForm = document.querySelector(
