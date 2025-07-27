@@ -2,27 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/team-project-food-boutique/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+    <title>Food Boutique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/team-project-food-boutique/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/team-project-food-boutique/assets/vendor-Df9iwuFY.js">
+    <link rel="modulepreload" crossorigin href="/team-project-food-boutique/assets/footer-BOpFOAkR.js">
+    <link rel="stylesheet" crossorigin href="/team-project-food-boutique/assets/vendor-gcKlGt6x.css">
+    <link rel="stylesheet" crossorigin href="/team-project-food-boutique/assets/index-BSuCXyps.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+  <div class="container header-container">
+    <img
+      class="header-logo"
+      src="/team-project-food-boutique/assets/logo-DhgViPew.svg"
+      alt="logo"
+      width="154"
+      height="28"
+    />
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a href="../index.html" class="header-nav-link">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="header-nav-item">
+          <a href="../cart-page.html" class="header-nav-link">
+            <div class="header-nav-link-cart">
+              <svg class="header-cart-icon" width="14" height="14">
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+              </svg>
+            </div>
+            <p class="header-cart-info">
+              Cart (<span class="header-cart-info-value"></span>)
+            </p>
+          </a>
         </li>
       </ul>
     </nav>
@@ -31,97 +51,461 @@
 
 
     <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
+      <section class="hero">
   <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
+    <h1 class="hero-title">
+      Welcome to the <span class="hero-accent-title">Food</span> Boutique!
     </h1>
+    <p class="hero-text">
+      With Food Boutique, you're not just subscribing to food, you're signing up
+      for a fresher, fitter, and happier you.
+    </p>
+    <div class="hero-images">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="/team-project-food-boutique/assets/hero-desk-CjgbeLrO.webp 1x, /team-project-food-boutique/assets/hero-desk@2x-BwQOcjbb.webp 2x"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/team-project-food-boutique/assets/hero-tab-D8DICSox.webp 1x, /team-project-food-boutique/assets/hero-tab@2x-xvVgz4c9.webp 2x"
+        />
+        <img
+          src="/team-project-food-boutique/assets/hero-mob-z7VZEtWb.webp"
+          srcset="/team-project-food-boutique/assets/hero-mob-z7VZEtWb.webp 1x, /team-project-food-boutique/assets/hero-mob@2x-CcMf-5wB.webp 2x"
+          alt="Man carries box with food"
+          class="hero-image"
+          width="335"
+          height="480"
+        />
+      </picture>
+      <img
+        src="/team-project-food-boutique/assets/hero-license-LELt4GfM.svg"
+        alt="Organic food"
+        class="hero-license-image"
+        width="100"
+        height="100"
+      />
+    </div>
   </div>
 </section>
 
-      <article class="badges">
+      <section class="filters">
   <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
+    <h2 class="filters-title">Filters:</h2>
+    <form action="#" class="filters-form">
+      <div class="filters-input-container">
+        <input
+          class="filters-input"
+          type="text"
+          name="searchQueryInput"
+          placeholder="Search for anything"
+        />
+        <button type="submit" class="filters-search-btn">
+          <svg class="filters-search-icon" width="20" height="20">
+            <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#search-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <select
+        class="filters-select"
+        id="filters-categories-select"
+        name="categoriesSelect"
+      >
+        <option value="all" selected>Categories</option>
+      </select>
+      <select class="filters-select" id="filters-sort-select" name="sortSelect">
+        <option value="popularity" selected>Popularity</option>
+        <option value="alph_asc">A to Z</option>
+        <option value="alph_desc">Z to A</option>
+        <option value="price_asc">Price: Low to High</option>
+        <option value="price_desc">Price: High to Low</option>
+      </select>
+    </form>
+  </div>
+</section>
+
+      <div class="catalogs-container">
+        <section class="products">
+  <div class="container">
+    <h2 class="products-title visually-hidden">Products catalog</h2>
+    <ul class="products-list"></ul>
+    <ul class="products-pagination-container">
+      <li class="products-pagination-side-item">
+        <ul class="products-pagination-left-side">
+          <li class="products-pagination-left-side-items">
+            <button type="button" class="product-pagination-nav-btn all">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-left-all-icon"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="products-pagination-left-side-items">
+            <button type="button" class="product-pagination-nav-btn once">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-left-once-icon"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
       </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
+      <li class="products-pagination-side-item">
+        <ul class="products-pagination-center-side"></ul>
       </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
+      <li class="products-pagination-side-item">
+        <ul class="products-pagination-right-side">
+          <li class="products-pagination-right-side-items">
+            <button type="button" class="product-pagination-nav-btn once">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-right-once-icon"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="products-pagination-right-side-items">
+            <button type="button" class="product-pagination-nav-btn all">
+              <svg
+                class="product-pagination-nav-btn-icon"
+                width="24"
+                height="24"
+              >
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-right-all-icon"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
       </li>
     </ul>
   </div>
-</article>
+</section>
 
+<template id="products-card-template">
+  <li class="products-item">
+    <div class="products-item-image-container">
+      <img src="" alt="" class="products-item-image" width="140" height="140" />
+      <div class="products-item-discount"></div>
+    </div>
+    <h3 class="products-subtitle">Baby Plum Tomatoes</h3>
+    <ul class="products-item-decsr-list">
+      <li class="products-item-descr-item">
+        Category:<span class="products-item-descr-item-value"
+          >Fresh Produce</span
+        >
+      </li>
+      <li class="products-item-descr-item">
+        Size:
+        <span class="products-item-descr-item-value">200 g</span>
+      </li>
+      <li class="products-item-descr-item">
+        Popularity:
+        <span class="products-item-descr-item-value">0</span>
+      </li>
+    </ul>
+    <div class="products-item-footer">
+      <p class="products-item-price">$3.99</p>
+      <button type="button" class="products-item-btn">
+        <svg class="products-item-btn-icon" width="18" height="18">
+          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+        </svg>
+      </button>
+    </div>
+  </li>
+</template>
+
+        <div class="catalog-side-bar-container">
+          <section class="popular-products">
+  <div class="container">
+    <h2 class="popular-products-title">Popular products</h2>
+    <ul class="popular-products-list"></ul>
+  </div>
+</section>
+
+<template id="popular-card-template">
+  <li class="popular-products-item">
+    <div class="popular-products-item-image-container">
+      <img
+        src=""
+        alt=""
+        class="popular-products-item-image"
+        width="56"
+        height="56"
+      />
+    </div>
+    <div class="popular-products-item-content">
+      <h3 class="popular-products-subtitle"></h3>
+      <ul class="popular-products-item-descr-list">
+        <li class="popular-products-item-descr-item">
+          Category:
+          <span class="popular-products-item-descr-item-value"></span>
+        </li>
+        <li class="popular-products-item-descr-item">
+          Size:
+          <span class="popular-products-item-descr-item-value"></span>
+        </li>
+        <li class="popular-products-item-descr-item">
+          Popularity:
+          <span class="popular-products-item-descr-item-value"></span>
+        </li>
+      </ul>
+    </div>
+    <button type="button" class="popular-products-item-btn">
+      <svg class="popular-products-item-btn-icon" width="12" height="12">
+        <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+      </svg>
+    </button>
+  </li>
+</template>
+
+          <section class="discount-products">
+  <div class="container">
+    <h2 class="discount-products-title">Discount products</h2>
+    <ul class="discount-products-list"></ul>
+  </div>
+</section>
+
+<template id="discount-card-template">
+  <li class="discount-products-item">
+    <div class="discount-products-item-image-container">
+      <img
+        src=""
+        alt=""
+        class="discount-products-item-image"
+        width="140"
+        height="140"
+      />
+      <img
+        src="/team-project-food-boutique/assets/products-discount-B9KjsRQc.svg"
+        alt="Discount"
+        class="discount-products-item-discount-image"
+        width="60"
+        height="60"
+      />
+    </div>
+    <div class="discount-products-item-footer">
+      <h3 class="discount-products-subtitle"></h3>
+
+      <div class="discount-products-item-buy-side">
+        <p class="discount-products-item-price"></p>
+        <button type="button" class="discount-products-item-btn">
+          <svg class="discount-products-item-btn-icon" width="18" height="18">
+            <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </li>
+</template>
+
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer-main-body">
+      <div class="footer-logo-and-socials">
+        <img
+          src="/team-project-food-boutique/assets/footer-logo-Cwvi_Jjf.svg"
+          class="footer-logo"
+          alt="logo"
+          width="154"
+          height="28"
+        />
+        <ul class="footer-socials-list">
+          <li class="footer-socials-item">
+            <a
+              class="footer-socials-link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#facebook-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a
+              class="footer-socials-link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#instagram-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a
+              class="footer-socials-link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#youtube-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-main-info">
+        <div>
+          <p class="footer-title">
+            Discover the Variety of Flavors and Quality
+          </p>
+          <p class="footer-text">
+            An online store where you will find fresh, natural and delicious
+            products for a healthy life and unforgettable gastronomic
+            adventures.
+          </p>
+        </div>
+        <div>
+          <p class="footer-lead">Subscribe and learn about new products!</p>
+          <form action="#" class="footer-form">
+            <input
+              type="email"
+              class="footer-form-input"
+              name="userEmail"
+              placeholder="Email"
+              pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+              required
+            />
+            <button type="submit" class="footer-form-btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-ending-container">
+      <p class="footer-ending-text">Food Boutique. All rights reserved.</p>
+      <p class="footer-privacy">
+        Privacy Policy &nbsp;/&nbsp; Terms of Service
+      </p>
+    </div>
   </div>
 </footer>
+
+
+    <div class="modal-backdrop product-modal-backdrop"></div>
+
+<template id="product-modal-template">
+  <div class="product-modal-window modal-window">
+    <div class="product-modal-container modal-container">
+      <button type="button" class="modal-close-btn">
+        <svg class="modal-close-btn-icon" width="22" height="22">
+          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#close-icon"></use>
+        </svg>
+      </button>
+      <div class="product-modal-main">
+        <div class="product-modal-image-container">
+          <img
+            src=""
+            alt=""
+            class="product-modal-image"
+            width="160"
+            height="160"
+          />
+          <div class="product-modal-discount"></div>
+        </div>
+        <div class="product-modal-content">
+          <h3 class="product-modal-title">Baby Plum Tomatoes</h3>
+          <ul class="product-modal-decsr-list">
+            <li class="product-modal-descr-item">
+              Category:<span class="product-modal-descr-item-value"
+                >Fresh Produce</span
+              >
+            </li>
+            <li class="product-modal-descr-item">
+              Size:
+              <span class="product-modal-descr-item-value">200 g</span>
+            </li>
+            <li class="product-modal-descr-item">
+              Popularity:
+              <span class="product-modal-descr-item-value">0</span>
+            </li>
+          </ul>
+          <p class="product-modal-descr-text">
+            A round, orange vegetable with a thick shell and seeds inside. It is
+            often used in cooking and baking for its sweet and earthy flavor.
+          </p>
+        </div>
+      </div>
+      <div class="product-modal-footer">
+        <p class="product-modal-price">$3.99</p>
+        <button type="button" class="product-modal-btn">
+          <span class="product-modal-btn-text">Add to</span
+          ><svg class="product-modal-btn-icon" width="18" height="18">
+            <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+    <div class="modal-backdrop subscribing-thank-modal-backdrop">
+  <div class="subscribing-thank-modal-window modal-window">
+    <div class="subscribing-thank-modal-container modal-container">
+      <button type="button" class="modal-close-btn">
+        <svg class="modal-close-btn-icon" width="22" height="22">
+          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#close-icon"></use>
+        </svg>
+      </button>
+      <h2 class="subscribing-thank-modal-title">
+        Thanks for subscribing for <span class="accent-text">new</span> products
+      </h2>
+      <p class="subscribing-thank-modal-descr">
+        We promise you organic and high-quality products that will meet your
+        expectations. Please stay with us and we promise you many pleasant
+        surprises.
+      </p>
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="/team-project-food-boutique/assets/subscribing-tab-Gf641uYt.webp 1x, /team-project-food-boutique/assets/subscribing-tab@2x-DFVmcYGC.webp 2x"
+        />
+
+        <img
+          src="/team-project-food-boutique/assets/subscribing-mob-BNDgTBBS.webp"
+          srcset="/team-project-food-boutique/assets/subscribing-mob-BNDgTBBS.webp 1x, /team-project-food-boutique/assets/subscribing-mob@2x-DLN8Afj9.webp 2x"
+          alt="Cart of food"
+          class="subscribing-thank-modal-image"
+          width="335"
+          height="144"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+
+    <div class="modal-backdrop subscribing-error-modal-backdrop">
+  <div class="subscribing-error-modal-window modal-window">
+    <div class="subscribing-error-modal-container modal-container">
+      <button type="button" class="modal-close-btn">
+        <svg class="modal-close-btn-icon" width="22" height="22">
+          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#close-icon"></use>
+        </svg>
+      </button>
+      <h2 class="subscribing-error-modal-title">
+        This <span class="accent-text">email address</span> has already been
+        entered
+      </h2>
+      <p class="subscribing-error-modal-descr">
+        You have already subscribed to our new products. Watch for offers at the
+        mailing address.
+      </p>
+    </div>
+  </div>
+</div>
 
 
   </body>
