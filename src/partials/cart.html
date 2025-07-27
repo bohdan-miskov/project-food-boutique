@@ -1,0 +1,79 @@
+<section class="cart">
+  <div class="container">
+    <div class="cart-header">
+      <span class="cart-icon-container">
+        <svg class="cart-icon" width="18" height="18">
+          <use href="img/icons.svg#cart-icon"></use>
+        </svg>
+      </span>
+      <h2 class="cart-title">
+        Cart(<span class="cart-product-count-value">0</span>)
+      </h2>
+    </div>
+    <div class="cart-products-container">
+      <button type="button" class="cart-products-delete-all-btn">
+        <span>Delete all</span>
+        <svg class="cart-products-delete-all-icon" width="24" height="24">
+          <use href="img/icons.svg#close-icon"></use>
+        </svg>
+      </button>
+      <ul class="cart-products-list"></ul>
+      <div class="cart-products-empty-container hidden">
+        <picture>
+          <source
+            media="(min-width:768px)"
+            srcset="img/cart/cart-tab.webp 1x, img/cart/cart-tab@2x.webp 2x"
+          />
+          <img
+            src="img/cart/cart-mob.webp"
+            alt="Empty cart"
+            srcset="img/cart/cart-mob.webp 1x, img/cart/cart-mob@2x.webp 2x"
+            class="cart-products-empty-image"
+            width="132"
+            height="114"
+          />
+        </picture>
+        <h3 class="cart-products-empty-title">
+          Your basket is <span class="accent-text">empty...</span>
+        </h3>
+        <p class="cart-products-empty-descr">
+          Go to the main page to select your favorite products and add them to
+          the cart.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<template id="cart-product-card-template">
+  <li class="cart-products-item">
+    <div class="cart-products-item-image-container">
+      <img
+        src=""
+        alt=""
+        class="cart-products-item-image"
+        width="64"
+        height="64"
+      />
+    </div>
+    <div class="cart-products-item-content">
+      <h3 class="cart-products-subtitle"></h3>
+      <ul class="cart-products-item-descr-list">
+        <li class="cart-products-item-descr-item">
+          Category:
+          <span class="cart-products-item-descr-item-value"></span>
+        </li>
+        <li class="cart-products-item-descr-item">
+          Size:
+          <span class="cart-products-item-descr-item-value"></span>
+        </li>
+      </ul>
+    </div>
+    <p class="cart-products-item-price"></p>
+    <button type="button" class="cart-products-item-delete-btn">
+      <svg class="cart-products-item-delete-icon" width="18" height="18">
+        <use href="img/icons.svg#close-icon"></use>
+      </svg>
+    </button>
+  </li>
+</template>

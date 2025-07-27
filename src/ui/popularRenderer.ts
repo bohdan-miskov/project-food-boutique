@@ -1,5 +1,6 @@
 import { getPopularProducts } from '../api/productsApi';
 import { Product } from '../types/products';
+import { renderProductModal } from './productModalRenderer';
 
 export const populatePopularProductsList = async (count = -1) => {
   const products = await getPopularProducts();
@@ -15,17 +16,25 @@ export const populatePopularProductsList = async (count = -1) => {
 };
 
 const createPopularProductsItem = ({
+  _id,
   name,
   category,
   size,
   popularity,
   img,
-}: Omit<Product, '_id' | 'price' | 'is10PercentOff'>): DocumentFragment => {
+}: Omit<Product, 'price' | 'is10PercentOff'>): DocumentFragment => {
   const template = document.getElementById(
     'popular-card-template'
   ) as HTMLTemplateElement;
 
   const clone = template.content.cloneNode(true) as DocumentFragment;
+
+  const productItemEl = clone.querySelector(
+    '.popular-products-item'
+  ) as HTMLElement;
+  productItemEl.addEventListener('click', () => {
+    renderProductModal(_id);
+  });
 
   const imageEl = clone.querySelector(
     '.popular-products-item-image'

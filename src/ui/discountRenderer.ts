@@ -1,5 +1,6 @@
 import { getDiscountProducts } from '../api/productsApi';
 import { Product } from '../types/products';
+import { renderProductModal } from './productModalRenderer';
 
 export const populateDiscountProductsList = async (count = -1) => {
   const products = await getDiscountProducts();
@@ -16,15 +17,23 @@ export const populateDiscountProductsList = async (count = -1) => {
 };
 
 const createPopularProductsItem = ({
+  _id,
   name,
   price,
   img,
-}: Pick<Product, 'name' | 'price' | 'img'>): DocumentFragment => {
+}: Pick<Product, '_id' | 'name' | 'price' | 'img'>): DocumentFragment => {
   const template = document.getElementById(
     'discount-card-template'
   ) as HTMLTemplateElement;
 
   const clone = template.content.cloneNode(true) as DocumentFragment;
+
+  const productItemEl = clone.querySelector(
+    '.discount-products-item'
+  ) as HTMLElement;
+  productItemEl.addEventListener('click', () => {
+    renderProductModal(_id);
+  });
 
   const imageEl = clone.querySelector(
     '.discount-products-item-image'
