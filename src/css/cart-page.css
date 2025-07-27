@@ -8,4 +8,5 @@
 /* Sections style */
 @import url('./header.css');
 @import url('./cart.css');
+@import url('./base-modal.css');
 @import url('./footer.css');

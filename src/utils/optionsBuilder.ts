@@ -1,4 +1,4 @@
-import { OptionsApi } from '../type/products';
+import { OptionsApi } from '../types/products';
 
 export const createOptions = (
   query: string,

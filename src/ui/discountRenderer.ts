@@ -1,5 +1,5 @@
 import { getDiscountProducts } from '../api/productsApi';
-import { Product } from '../type/products';
+import { Product } from '../types/products';
 
 export const populateDiscountProductsList = async (count = -1) => {
   const products = await getDiscountProducts();

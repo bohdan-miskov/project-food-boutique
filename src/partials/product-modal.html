@@ -1,0 +1,56 @@
+<div class="modal-backdrop product-modal-backdrop"></div>
+
+<template id="product-modal-template">
+  <div class="product-modal-window modal-window">
+    <div class="product-modal-container modal-container">
+      <button type="button" class="modal-close-btn">
+        <svg class="modal-close-btn-icon" width="22" height="22">
+          <use href="img/icons.svg#close-icon"></use>
+        </svg>
+      </button>
+      <div class="product-modal-main">
+        <div class="product-modal-image-container">
+          <img
+            src=""
+            alt=""
+            class="product-modal-image"
+            width="160"
+            height="160"
+          />
+          <div class="product-modal-discount"></div>
+        </div>
+        <div class="product-modal-content">
+          <h3 class="product-modal-title">Baby Plum Tomatoes</h3>
+          <ul class="product-modal-decsr-list">
+            <li class="product-modal-descr-item">
+              Category:<span class="product-modal-descr-item-value"
+                >Fresh Produce</span
+              >
+            </li>
+            <li class="product-modal-descr-item">
+              Size:
+              <span class="product-modal-descr-item-value">200 g</span>
+            </li>
+            <li class="product-modal-descr-item">
+              Popularity:
+              <span class="product-modal-descr-item-value">0</span>
+            </li>
+          </ul>
+          <p class="product-modal-descr-text">
+            A round, orange vegetable with a thick shell and seeds inside. It is
+            often used in cooking and baking for its sweet and earthy flavor.
+          </p>
+        </div>
+      </div>
+      <div class="product-modal-footer">
+        <p class="product-modal-price">$3.99</p>
+        <button type="button" class="product-modal-btn">
+          <span class="product-modal-btn-text">Add to</span
+          ><svg class="product-modal-btn-icon" width="18" height="18">
+            <use href="img/icons.svg#cart-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
