@@ -1,0 +1,27 @@
+<section class="order">
+  <div class="container">
+    <h2 class="order-title">Your Order</h2>
+    <div class="order-price-container">
+      <p class="order-price-title">Total</p>
+      <p class="order-price-sum">
+        Sum:
+        <span class="order-price-sum-value"></span>
+      </p>
+    </div>
+    <form action="#" class="order-form">
+      <div class="order-form-input-container">
+        <label class="order-form-label" for="user-order-email">Mail:</label>
+        <input
+          type="email"
+          class="order-form-input"
+          id="user-order-email"
+          name="userOrderEmail"
+          placeholder="Enter your email"
+          pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+          required
+        />
+      </div>
+      <button type="submit" class="order-form-btn">Checkout</button>
+    </form>
+  </div>
+</section>

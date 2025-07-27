@@ -30,7 +30,7 @@ const createProductModal = ({
   const clone = template.content.cloneNode(true) as DocumentFragment;
 
   if (is10PercentOff) {
-    const itemEl = clone.querySelector('.product-modal') as HTMLElement;
+    const itemEl = clone.querySelector('.product-modal-window') as HTMLElement;
     itemEl.classList.add('is-discount');
   }
 

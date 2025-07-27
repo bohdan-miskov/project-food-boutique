@@ -51,3 +51,7 @@ html {
 button {
   border: none;
 }
+
+.hidden {
+  display: none;
+}
