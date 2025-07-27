@@ -4,20 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Food Boutique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/home-page.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <load src="./partials/header.html" />
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <load src="./partials/hero.html" />
+      <load src="./partials/filters.html" />
+      <div class="catalogs-container">
+        <load src="./partials/products-catalog.html" />
+        <div class="catalog-side-bar-container">
+          <load src="./partials/popular-products.html" />
+          <load src="./partials/discount-products.html" />
+        </div>
+      </div>
     </main>
 
     <load src="./partials/footer.html" />
 
-    <script type="module" src="./main.js"></script>
+    <load src="./partials/product-modal.html" />
+    <load src="./partials/subscribing-thank-modal.html" />
+    <load src="./partials/subscribing-error-modal.html" />
+
+    <script type="module" defer src="./home-page.ts"></script>
   </body>
 </html>

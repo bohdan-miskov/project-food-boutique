@@ -1,0 +1,34 @@
+<section class="filters">
+  <div class="container">
+    <h2 class="filters-title">Filters:</h2>
+    <form action="#" class="filters-form">
+      <div class="filters-input-container">
+        <input
+          class="filters-input"
+          type="text"
+          name="searchQueryInput"
+          placeholder="Search for anything"
+        />
+        <button type="submit" class="filters-search-btn">
+          <svg class="filters-search-icon" width="20" height="20">
+            <use href="img/icons.svg#search-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <select
+        class="filters-select"
+        id="filters-categories-select"
+        name="categoriesSelect"
+      >
+        <option value="all" selected>Categories</option>
+      </select>
+      <select class="filters-select" id="filters-sort-select" name="sortSelect">
+        <option value="popularity" selected>Popularity</option>
+        <option value="alph_asc">A to Z</option>
+        <option value="alph_desc">Z to A</option>
+        <option value="price_asc">Price: Low to High</option>
+        <option value="price_desc">Price: High to Low</option>
+      </select>
+    </form>
+  </div>
+</section>
