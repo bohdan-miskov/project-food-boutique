@@ -1,0 +1,120 @@
+.product-modal-window {
+  width: 335px;
+}
+.product-modal-container {
+  padding: 40px 20px;
+}
+
+.product-modal-image-container {
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: var(--background-color);
+}
+.product-modal-image {
+  margin: 0 auto;
+}
+.product-modal.is-discount .product-modal-discount {
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/products-catalog/products-discount.svg);
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  position: absolute;
+  top: -23px;
+  right: -10px;
+}
+.product-modal-title {
+  margin-bottom: 10px;
+}
+.product-modal-decsr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.product-modal-descr-item {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(1, 1, 1, 0.3);
+}
+.product-modal-descr-item:nth-child(3) {
+  flex-basis: 100%;
+}
+.product-modal-descr-item-value {
+  color: var(--main-color);
+}
+.product-modal-descr-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  margin-bottom: 40px;
+}
+.product-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.product-modal-price {
+  font-size: 18px;
+  line-height: 1.11;
+}
+.product-modal-btn {
+  border: none;
+  padding: 12px 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: var(--accent-color);
+}
+.product-modal-btn-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--light-main-color);
+}
+.product-modal-btn-icon {
+  fill: var(--light-main-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .product-modal-window {
+    width: 600px;
+  }
+  .product-modal-container {
+    padding: 40px;
+  }
+  .product-modal-main {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .product-modal-image-container {
+    padding: 26px 40px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .product-modal-decsr-list {
+    margin-bottom: 24px;
+  }
+  .product-modal-descr-text {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .product-modal-price {
+    font-size: 20px;
+  }
+  .product-modal-btn {
+    padding: 10px 28px;
+  }
+  .product-modal-btn-text {
+    font-size: 16px;
+  }
+}

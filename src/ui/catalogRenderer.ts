@@ -1,4 +1,5 @@
-import { Product } from '../type/products';
+import { Product } from '../types/products';
+import { renderProductModal } from './productModalRenderer';
 
 export const renderCatalogProducts = (products: Product[]) => {
   const productList = document.querySelector('.products-list') as HTMLElement;
@@ -10,6 +11,7 @@ export const renderCatalogProducts = (products: Product[]) => {
 };
 
 const createCatalogProductsItem = ({
+  _id,
   img,
   name,
   category,
@@ -17,12 +19,17 @@ const createCatalogProductsItem = ({
   price,
   popularity,
   is10PercentOff,
-}: Omit<Product, '_id'>) => {
+}: Product) => {
   const template = document.getElementById(
     'products-card-template'
   ) as HTMLTemplateElement;
 
   const clone = template.content.cloneNode(true) as DocumentFragment;
+
+  const productItemEl = clone.querySelector('.products-item') as HTMLElement;
+  productItemEl.addEventListener('click', () => {
+    renderProductModal(_id);
+  });
 
   if (is10PercentOff) {
     const itemEl = clone.querySelector('.products-item') as HTMLElement;
