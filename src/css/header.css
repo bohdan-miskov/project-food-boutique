@@ -1,44 +1,84 @@
+/* #region Phone styles */
 .header {
-  padding: 20px 0;
+  padding: 18px 0;
 }
-.nav {
+
+.header-container {
   display: flex;
   justify-content: space-between;
-}
-.nav-logo {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
-.nav-list {
+
+.header-nav-list {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  gap: 6px;
 }
-.nav-link {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+
+.header-nav-item:not(:last-child) .header-nav-link {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: var(--accent-color);
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+.header-nav-link-cart {
+  border-radius: 30px;
+  background: var(--accent-color);
+  padding: 12px;
+  height: 38px;
 }
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+.header-cart-info {
+  display: none;
 }
-.nav-link.active::after {
-  background: #747bff;
+
+.header-cart-icon {
+  fill: var(--light-main-color);
 }
+/* #endregion */
+
+/* #region Tablet styles */
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 24px 0;
+  }
+  .header-logo {
+    width: 195px;
+    height: 32px;
+  }
+  .header-nav-list {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header-nav-item:not(:last-child) .header-nav-link {
+    padding: 12px 28px;
+  }
+
+  .header-nav-item:last-child .header-nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+  .header-nav-link-cart {
+    padding: 10px;
+  }
+  .header-cart-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .header-cart-info {
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+}
+/* #endregion */
+
+/* #region Desktop styles */
+@media only screen and (min-width: 1440px) {
+  .header-nav-list {
+    gap: 24px;
+  }
+}
+/* #endregion */

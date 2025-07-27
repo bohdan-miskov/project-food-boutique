@@ -1,0 +1,39 @@
+<section class="discount-products">
+  <div class="container">
+    <h2 class="discount-products-title">Discount products</h2>
+    <ul class="discount-products-list"></ul>
+  </div>
+</section>
+
+<template id="discount-card-template">
+  <li class="discount-products-item">
+    <div class="discount-products-item-image-container">
+      <img
+        src=""
+        alt=""
+        class="discount-products-item-image"
+        width="140"
+        height="140"
+      />
+      <img
+        src="img/products-catalog/products-discount.svg"
+        alt="Discount"
+        class="discount-products-item-discount-image"
+        width="60"
+        height="60"
+      />
+    </div>
+    <div class="discount-products-item-footer">
+      <h3 class="discount-products-subtitle"></h3>
+
+      <div class="discount-products-item-buy-side">
+        <p class="discount-products-item-price"></p>
+        <button type="button" class="discount-products-item-btn">
+          <svg class="discount-products-item-btn-icon" width="18" height="18">
+            <use href="img/icons.svg#cart-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </li>
+</template>

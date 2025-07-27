@@ -1,0 +1,102 @@
+/* #region Phone styles */
+.popular-products {
+  padding: 40px 0;
+}
+.popular-products-title {
+  margin-bottom: 20px;
+}
+.popular-products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.popular-products-item {
+  position: relative;
+  border-radius: 10px;
+  padding: 12px;
+  padding-right: 32px;
+  display: flex;
+  gap: 10px;
+  background-color: var(--white-color);
+}
+.popular-products-item-image-container {
+  border-radius: 10px;
+  background-color: var(--background-color);
+  padding: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-products-subtitle {
+  margin-bottom: 12px;
+}
+.popular-products-item-descr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.popular-products-item-descr-item {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(1, 1, 1, 0.3);
+}
+.popular-products-item-descr-item:nth-child(1) {
+  flex-basis: 100%;
+}
+.popular-products-item-descr-item-value {
+  color: var(--main-color);
+}
+.popular-products-item-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.popular-products-item-btn-icon {
+  fill: var(--accent-color);
+}
+/* #endregion */
+
+/* #region Tabley styles */
+@media only screen and (min-width: 768px) {
+  .popular-products {
+    padding: 50px 0 32px;
+  }
+
+  .popular-products-list {
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .popular-products-item {
+    width: 275px;
+    padding-right: 26px;
+  }
+
+  .popular-products-subtitle {
+    margin-bottom: 10px;
+  }
+  .popular-products-item-descr-list {
+    flex-wrap: wrap;
+  }
+}
+/* #endregion */
+
+/* #region Desktop styles */
+@media only screen and (min-width: 1440px) {
+  .popular-products {
+    padding: 0 0 20px;
+  }
+  .popular-products-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+/* #endregion */

@@ -1,0 +1,70 @@
+/* #region Phone styles */
+.hero {
+  padding: 54px 0 37px;
+}
+.hero-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.hero-accent-title {
+  color: var(--accent-color);
+}
+.hero-text {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.hero-images {
+  position: relative;
+}
+.hero-image {
+  border-radius: 30px;
+}
+.hero-license-image {
+  position: absolute;
+  top: -7px;
+  right: 8px;
+}
+/* #endregion */
+
+/* #region Tablet styles */
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 92px 0 37px;
+  }
+  .hero-title {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 658px;
+  }
+  .hero-text {
+    margin: 0 auto;
+    max-width: 492px;
+    margin-bottom: 40px;
+  }
+  .hero-image {
+    border-radius: 60px;
+    width: 704px;
+    height: 580px;
+  }
+  .hero-license-image {
+    top: -30px;
+    right: 10px;
+  }
+}
+/* #endregion */
+
+/* #region Desktop styles */
+@media only screen and (min-width: 1440px) {
+  .hero {
+    padding: 52px 0 37px;
+  }
+  .hero-image {
+    width: 1240px;
+    height: 350px;
+  }
+  .hero-license-image {
+    top: -50px;
+    right: 20px;
+  }
+}
+/* #endregion */

@@ -1,0 +1,119 @@
+/* #region Phone styles */
+.filters {
+  padding: 37px 0 20px;
+}
+
+.filters-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--main-translucent-color);
+  margin-bottom: 8px;
+}
+.filters-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.filters-input-container {
+  position: relative;
+}
+.filters-input,
+.filters-select {
+  padding: 14px 20px;
+  width: 100%;
+  border: 1px solid rgba(1, 1, 1, 0.3);
+  border-radius: 30px;
+  background-color: transparent;
+  transition: 300ms ease-in;
+  transition-property: border-color, background-color;
+}
+.filters-input {
+  height: 100%;
+  padding-right: 44px;
+}
+.filters-select.ss-main {
+  font-family: 'Times New Roman', Times, serif;
+  border: 1px solid rgba(1, 1, 1, 0.3);
+  background-color: transparent;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--main-color);
+}
+.filters-select .ss-content {
+  border: none;
+  box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.04),
+    0 20px 69px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.filters-select .ss-option:is(:hover, :focus) {
+  background-color: var(--accent-color) !important;
+  outline: none;
+  box-shadow: none;
+}
+.filters-select .ss-option.ss-selected {
+  background-color: #e8e8e2;
+  color: #000;
+}
+.filters-input::placeholder {
+  color: var(--main-color);
+}
+:is(.filters-input, .filters-select.ss-main):is(:hover, :focus, :active) {
+  border-color: var(--accent-color);
+  background-color: var(--white-color);
+  border-radius: 30px;
+  outline: none;
+  box-shadow: none;
+}
+
+.filters-search-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+.filters-search-icon {
+  fill: var(--main-color);
+}
+/* #endregion */
+
+/* #region Tablet styles */
+@media only screen and (min-width: 768px) {
+  .filters-form {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .filters-select.ss-main {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+  .filters-input {
+    width: 269px;
+  }
+  .filters-select[name='categoriesSelect'] + .ss-main {
+    max-width: 195px;
+  }
+  .filters-select[name='sortSelect'] + .ss-main {
+    width: 210px;
+  }
+}
+/* #endregion */
+
+/* #region Desktop styles */
+@media only screen and (min-width: 1440px) {
+  .filters {
+    padding-bottom: 30px;
+  }
+}
+/* #endregion */
