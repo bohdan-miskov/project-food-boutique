@@ -1,4 +1,5 @@
 import { getPopularProducts } from '../api/productsApi';
+import { handlerAddProductToCart } from '../storage/cartStorage';
 import { Product } from '../types/products';
 import { renderProductModal } from './productModalRenderer';
 
@@ -9,6 +10,7 @@ export const populatePopularProductsList = async (count = -1) => {
   const popularProductsList = document.querySelector(
     '.popular-products-list'
   ) as HTMLElement;
+  popularProductsList.innerHTML = '';
 
   usedProducts.forEach(product =>
     popularProductsList.appendChild(createPopularProductsItem(product))
@@ -53,6 +55,14 @@ const createPopularProductsItem = ({
   valuesEls[0].textContent = category.split('_').join(' ');
   valuesEls[1].textContent = size;
   valuesEls[2].textContent = String(popularity);
+
+  const buyBtnEl = clone.querySelector(
+    '.popular-products-item-btn'
+  ) as HTMLButtonElement;
+  buyBtnEl.addEventListener(
+    'click',
+    async (e: MouseEvent) => await handlerAddProductToCart(e, _id)
+  );
 
   return clone;
 };
