@@ -68,8 +68,35 @@
           <span class="cart-products-item-descr-item-value"></span>
         </li>
       </ul>
+      <div class="cart-products-item-footer">
+        <p class="cart-products-item-price"></p>
+        <div class="cart-products-item-qty-container quantity-selector">
+          <button
+            type="button"
+            class="cart-products-item-qty-btn decrease"
+            aria-label="Зменшити кількість"
+          >
+            −
+          </button>
+          <input
+            type="number"
+            class="cart-products-item-qty-input"
+            value="1"
+            min="1"
+            max="99"
+            aria-live="polite"
+            aria-atomic="true"
+          />
+          <button
+            type="button"
+            class="cart-products-item-qty-btn increase"
+            aria-label="Збільшити кількість"
+          >
+            +
+          </button>
+        </div>
+      </div>
     </div>
-    <p class="cart-products-item-price"></p>
     <button type="button" class="cart-products-item-delete-btn">
       <svg class="cart-products-item-delete-icon" width="18" height="18">
         <use href="img/icons.svg#close-icon"></use>

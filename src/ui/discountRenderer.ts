@@ -1,4 +1,5 @@
 import { getDiscountProducts } from '../api/productsApi';
+import { handlerAddProductToCart } from '../storage/cartStorage';
 import { Product } from '../types/products';
 import { renderProductModal } from './productModalRenderer';
 
@@ -10,6 +11,7 @@ export const populateDiscountProductsList = async (count = -1) => {
   const productsList = document.querySelector(
     '.discount-products-list'
   ) as HTMLElement;
+  productsList.innerHTML = '';
 
   usedProducts.forEach(product =>
     productsList.appendChild(createPopularProductsItem(product))
@@ -50,6 +52,14 @@ const createPopularProductsItem = ({
     '.discount-products-item-price'
   ) as HTMLElement;
   priceEl.textContent = '$' + price;
+
+  const buyBtnEl = clone.querySelector(
+    '.discount-products-item-btn'
+  ) as HTMLButtonElement;
+  buyBtnEl.addEventListener(
+    'click',
+    async (e: MouseEvent) => await handlerAddProductToCart(e, _id)
+  );
 
   return clone;
 };

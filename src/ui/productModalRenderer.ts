@@ -1,4 +1,5 @@
 import { getProductById } from '../api/productsApi';
+import { handlerAddProductToCart } from '../storage/cartStorage';
 import { ProductDetails } from '../types/products';
 import { openModal } from './modals';
 
@@ -58,6 +59,14 @@ const createProductModal = ({
 
   const priceEl = clone.querySelector('.product-modal-price') as HTMLElement;
   priceEl.textContent = '$' + price;
+
+  const buyBtnEl = clone.querySelector(
+    '.product-modal-btn'
+  ) as HTMLButtonElement;
+  buyBtnEl.addEventListener(
+    'click',
+    async (e: MouseEvent) => await handlerAddProductToCart(e, _id)
+  );
 
   return clone;
 };
