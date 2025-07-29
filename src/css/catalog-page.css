@@ -4,6 +4,7 @@
 @import url('./container.css');
 @import url('./animations.css');
 @import url('./typography.css');
+@import url('./base-modal.css');
 
 /* Sections style */
 @import url('./header.css');
@@ -12,8 +13,7 @@
 @import url('./popular-products.css');
 @import url('./discount-products.css');
 @import url('./products-catalog.css');
-@import url('./base-modal.css');
+@import url('./footer.css');
 @import url('./product-modal.css');
 @import url('./subscribing-thank-modal.css');
 @import url('./subscribing-error-modal.css');
-@import url('./footer.css');

@@ -50,6 +50,7 @@
   margin-bottom: 14px;
   width: 100%;
   background-color: transparent;
+  color: var(--light-main-color);
 }
 .footer-form-input::placeholder {
   color: var(--light-main-translucent-color);

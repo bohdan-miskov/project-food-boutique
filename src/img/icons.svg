@@ -44,5 +44,12 @@
         <symbol id="pagin-caret-right-once-icon" viewBox="0 0 32 32">
             <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M13.333 21.333l5.333-5.333-5.333-5.333"></path>
         </symbol>
+        <symbol id="minus-icon" viewBox="0 0 32 32">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M6.67 16h18.667"></path>
+        </symbol>
+        <symbol id="plus-icon" viewBox="0 0 32 32">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M16 6.667v18.667"></path>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M6.67 16h18.667"></path>
+        </symbol>
     </defs>
 </svg>
