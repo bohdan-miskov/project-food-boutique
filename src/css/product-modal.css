@@ -11,11 +11,14 @@
   padding: 20px 0;
   margin-bottom: 20px;
   background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-modal-image {
   margin: 0 auto;
 }
-.product-modal.is-discount .product-modal-discount {
+.product-modal-window.is-discount .product-modal-discount {
   width: 60px;
   height: 60px;
   background-image: url(../img/products-catalog/products-discount.svg);

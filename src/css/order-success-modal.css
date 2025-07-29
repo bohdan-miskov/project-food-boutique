@@ -1,0 +1,38 @@
+.order-success-modal-window {
+  width: 335px;
+}
+.order-success-modal-container {
+  padding: 40px 20px 60px;
+}
+.order-success-modal-image {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.order-success-modal-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.order-success-modal-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+@media only screen and (min-width: 768px) {
+  .order-success-modal-window {
+    width: 560px;
+  }
+  .order-success-modal-container {
+    padding: 80px 40px;
+  }
+  .order-success-modal-title {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .order-success-modal-text {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}

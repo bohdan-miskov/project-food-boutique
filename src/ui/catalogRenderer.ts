@@ -1,9 +1,20 @@
+import { handlerAddProductToCart } from '../storage/cartStorage';
 import { Product } from '../types/products';
 import { renderProductModal } from './productModalRenderer';
 
 export const renderCatalogProducts = (products: Product[]) => {
   const productList = document.querySelector('.products-list') as HTMLElement;
   productList.innerHTML = '';
+  const productEmptyContainerEl = document.querySelector(
+    '.products-empty-container'
+  ) as HTMLElement;
+
+  if (products.length === 0) {
+    productEmptyContainerEl.classList.remove('hidden');
+    return;
+  }
+
+  productEmptyContainerEl.classList.add('hidden');
 
   products.forEach(product =>
     productList.appendChild(createCatalogProductsItem(product))
@@ -54,6 +65,14 @@ const createCatalogProductsItem = ({
 
   const priceEl = clone.querySelector('.products-item-price') as HTMLElement;
   priceEl.textContent = '$' + price;
+
+  const buyBtnEl = clone.querySelector(
+    '.products-item-btn'
+  ) as HTMLButtonElement;
+  buyBtnEl.addEventListener(
+    'click',
+    async (e: MouseEvent) => await handlerAddProductToCart(e, _id)
+  );
 
   return clone;
 };

@@ -1,4 +1,5 @@
 import { getProductById } from '../api/productsApi';
+import { handlerAddProductToCart } from '../storage/cartStorage';
 import { ProductDetails } from '../types/products';
 import { openModal } from './modals';
 
@@ -30,7 +31,7 @@ const createProductModal = ({
   const clone = template.content.cloneNode(true) as DocumentFragment;
 
   if (is10PercentOff) {
-    const itemEl = clone.querySelector('.product-modal') as HTMLElement;
+    const itemEl = clone.querySelector('.product-modal-window') as HTMLElement;
     itemEl.classList.add('is-discount');
   }
 
@@ -58,6 +59,14 @@ const createProductModal = ({
 
   const priceEl = clone.querySelector('.product-modal-price') as HTMLElement;
   priceEl.textContent = '$' + price;
+
+  const buyBtnEl = clone.querySelector(
+    '.product-modal-btn'
+  ) as HTMLButtonElement;
+  buyBtnEl.addEventListener(
+    'click',
+    async (e: MouseEvent) => await handlerAddProductToCart(e, _id)
+  );
 
   return clone;
 };
