@@ -1,12 +1,58 @@
-import { getCartFromStorage } from '../storage/cartStorage';
+import {
+  handlerDeleteProductFromCart,
+  handlerSetCountOfProductToCart,
+} from '../storage/cartStorage';
 import { ProductCartInfo } from '../types/products';
+import { debounceFunction } from '../utils/debounce';
 
-export const populateCartProductsList = async () => {
-  const cartProducts = getCartFromStorage();
+const hideCart = () => {
+  const productsContainer = document.querySelector('.cart-products-container');
+  if (productsContainer) {
+    productsContainer.classList.add('hidden');
+  }
+  const orderContainer = document.querySelector<HTMLElement>('.order');
+  if (orderContainer) {
+    orderContainer.classList.add('hidden');
+  }
+  const epmtyContainer = document.querySelector<HTMLElement>(
+    '.cart-products-empty-container'
+  );
+  if (epmtyContainer) {
+    epmtyContainer.classList.remove('hidden');
+  }
+};
+
+const showCart = () => {
+  const epmtyContainer = document.querySelector<HTMLElement>(
+    '.cart-products-empty-container'
+  );
+  if (epmtyContainer) {
+    epmtyContainer.classList.add('hidden');
+  }
+  const productsContainer = document.querySelector('.cart-products-container');
+  if (productsContainer) {
+    productsContainer.classList.remove('hidden');
+  }
+  const orderContainer = document.querySelector<HTMLElement>('.order');
+  if (orderContainer) {
+    orderContainer.classList.remove('hidden');
+  }
+};
+
+export const populateCartProductsList = async (
+  cartProducts: ProductCartInfo[]
+) => {
   const cartProductsList = document.querySelector(
     '.cart-products-list'
   ) as HTMLElement;
   cartProductsList.innerHTML = '';
+
+  if (cartProducts.length == 0) {
+    hideCart();
+    return;
+  }
+
+  showCart();
 
   cartProducts.forEach(cartProduct =>
     cartProductsList.appendChild(createCartProductsItem(cartProduct))
@@ -48,7 +94,28 @@ const createCartProductsItem = ({
   ) as HTMLElement;
   priceEl.textContent = `$` + price.toString();
 
+  const deleteBtn = clone.querySelector(
+    '.cart-products-item-delete-btn'
+  ) as HTMLButtonElement;
+  deleteBtn.addEventListener('click', () => handlerDeleteProductFromCart(_id));
+
   initQtySelector(clone);
+
+  const input = clone.querySelector<HTMLInputElement>(
+    '.cart-products-item-qty-input'
+  );
+  if (!input) {
+    throw new Error('Quantity input is not found');
+  }
+  const debounceHandlerCountChange = debounceFunction(
+    handlerSetCountOfProductToCart,
+    350
+  );
+
+  input.addEventListener('change', (e: Event) =>
+    debounceHandlerCountChange(e, _id)
+  );
+  input.value = count.toString();
   return clone;
 };
 

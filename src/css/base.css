@@ -13,6 +13,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-weight: 500;
   font-size: 16px;
@@ -50,6 +53,17 @@ html {
 
 button {
   border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+button:disabled {
+  cursor: default;
 }
 
 .hidden {
