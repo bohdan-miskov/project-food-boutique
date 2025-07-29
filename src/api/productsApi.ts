@@ -3,6 +3,7 @@ import {
   OptionsApi,
   Product,
   ProductDetails,
+  ProductRequest,
   ProductsResponse,
 } from '../types/products';
 
@@ -35,4 +36,14 @@ export const getProductById = async (id: string) => {
     `https://food-boutique.b.goit.study/api/products/${id}`
   );
   return response.data;
+};
+
+export const checkoutOrder = async (
+  reqProducts: ProductRequest[],
+  email: string
+) => {
+  return await axios.post('https://food-boutique.b.goit.study/api/orders', {
+    email,
+    products: reqProducts,
+  });
 };

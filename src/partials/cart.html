@@ -1,5 +1,5 @@
 <section class="cart">
-  <div class="container">
+  <div class="container cart-container">
     <div class="cart-header">
       <span class="cart-icon-container">
         <svg class="cart-icon" width="18" height="18">
@@ -18,29 +18,29 @@
         </svg>
       </button>
       <ul class="cart-products-list"></ul>
-      <div class="cart-products-empty-container hidden">
-        <picture>
-          <source
-            media="(min-width:768px)"
-            srcset="img/cart/cart-tab.webp 1x, img/cart/cart-tab@2x.webp 2x"
-          />
-          <img
-            src="img/cart/cart-mob.webp"
-            alt="Empty cart"
-            srcset="img/cart/cart-mob.webp 1x, img/cart/cart-mob@2x.webp 2x"
-            class="cart-products-empty-image"
-            width="132"
-            height="114"
-          />
-        </picture>
-        <h3 class="cart-products-empty-title">
-          Your basket is <span class="accent-text">empty...</span>
-        </h3>
-        <p class="cart-products-empty-descr">
-          Go to the main page to select your favorite products and add them to
-          the cart.
-        </p>
-      </div>
+    </div>
+    <div class="cart-products-empty-container hidden">
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="img/cart/cart-tab.webp 1x, img/cart/cart-tab@2x.webp 2x"
+        />
+        <img
+          src="img/cart/cart-mob.webp"
+          alt="Empty cart"
+          srcset="img/cart/cart-mob.webp 1x, img/cart/cart-mob@2x.webp 2x"
+          class="cart-products-empty-image"
+          width="132"
+          height="114"
+        />
+      </picture>
+      <h3 class="cart-products-empty-title">
+        Your basket is <span class="accent-text">empty...</span>
+      </h3>
+      <p class="cart-products-empty-descr">
+        Go to the main page to select your favorite products and add them to the
+        cart.
+      </p>
     </div>
   </div>
 </section>
@@ -76,7 +76,9 @@
             class="cart-products-item-qty-btn decrease"
             aria-label="Зменшити кількість"
           >
-            −
+            <svg class="cart-products-item-qty-icon" width="14" height="14">
+              <use href="img/icons.svg#minus-icon"></use>
+            </svg>
           </button>
           <input
             type="number"
@@ -92,7 +94,9 @@
             class="cart-products-item-qty-btn increase"
             aria-label="Збільшити кількість"
           >
-            +
+            <svg class="cart-products-item-qty-icon" width="14" height="14">
+              <use href="img/icons.svg#plus-icon"></use>
+            </svg>
           </button>
         </div>
       </div>
