@@ -18,11 +18,10 @@
 .header-nav-item:not(:last-child) .header-nav-link {
   padding: 10px 20px;
   border-radius: 30px;
-  background: var(--accent-color);
 }
 .header-nav-link-cart {
   border-radius: 30px;
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   padding: 12px;
   height: 38px;
 }
@@ -33,6 +32,33 @@
 .header-cart-icon {
   fill: var(--light-main-color);
 }
+
+.header-scroll-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--light-main-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+.header-scroll-btn-icon {
+  fill: var(--light-main-color);
+}
+.header-scroll-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* #endregion */
 
 /* #region Tablet styles */

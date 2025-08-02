@@ -1,22 +1,23 @@
-<header class="header">
+<header class="header" id="header">
   <div class="container header-container">
-    <img
-      class="header-logo"
-      src="img/logo.svg"
-      alt="logo"
-      width="154"
-      height="28"
-    />
+    <a href="../index.html">
+      <img
+        class="header-logo"
+        src="img/logo.svg"
+        alt="logo"
+        width="154"
+        height="28"
+    /></a>
     <nav class="header-nav">
       <ul class="header-nav-list">
         <li class="header-nav-item">
-          <a href="../index.html" class="header-nav-link">Home</a>
+          <a href="../index.html" class="header-nav-link green-btn">Home</a>
         </li>
         <li class="header-nav-item">
           <a href="../cart-page.html" class="header-nav-link">
-            <div class="header-nav-link-cart">
+            <div class="header-nav-link-cart green-btn">
               <svg class="header-cart-icon" width="14" height="14">
-                <use href="img/icons.svg#cart-icon"></use>
+                <use href="img/icons.svg#icon-cart"></use>
               </svg>
             </div>
             <p class="header-cart-info">
@@ -26,5 +27,14 @@
         </li>
       </ul>
     </nav>
+    <a
+      href="#header"
+      class="header-scroll-btn green-btn"
+      aria-label="Scroll to top"
+    >
+      <svg class="header-scroll-btn-icon" width="18" height="24">
+        <use href="img/icons.svg#icon-double-arrow-top"></use>
+      </svg>
+    </a>
   </div>
 </header>

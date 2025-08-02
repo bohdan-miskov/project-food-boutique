@@ -4,25 +4,29 @@
     <form action="#" class="filters-form">
       <div class="filters-input-container">
         <input
-          class="filters-input"
+          class="filters-input light-input"
           type="text"
           name="searchQueryInput"
           placeholder="Search for anything"
         />
         <button type="submit" class="filters-search-btn">
           <svg class="filters-search-icon" width="20" height="20">
-            <use href="img/icons.svg#search-icon"></use>
+            <use href="img/icons.svg#icon-search"></use>
           </svg>
         </button>
       </div>
       <select
-        class="filters-select"
+        class="filters-select light-input"
         id="filters-categories-select"
         name="categoriesSelect"
       >
         <option value="all" selected>Categories</option>
       </select>
-      <select class="filters-select" id="filters-sort-select" name="sortSelect">
+      <select
+        class="filters-select light-input"
+        id="filters-sort-select"
+        name="sortSelect"
+      >
         <option value="popularity" selected>Popularity</option>
         <option value="alph_asc">A to Z</option>
         <option value="alph_desc">Z to A</option>

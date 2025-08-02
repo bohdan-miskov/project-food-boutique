@@ -1,0 +1,21 @@
+@import url('../base/fonts.css');
+@import url('../base/variables.css');
+@import url('../base/reset.css');
+@import url('../base/base.css');
+@import url('../base/container.css');
+@import url('../base/base-modal.css');
+@import url('../base/typography.css');
+@import url('../base/animations.css');
+@import url('../base/interactions.css');
+
+/* Sections style */
+@import url('../components/header.css');
+@import url('../components/hero.css');
+@import url('../components/filters.css');
+@import url('../components/popular-products.css');
+@import url('../components/discount-products.css');
+@import url('../components/products-catalog.css');
+@import url('../components/footer.css');
+@import url('../components/product-modal.css');
+@import url('../components/subscribing-thank-modal.css');
+@import url('../components/subscribing-error-modal.css');
