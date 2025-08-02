@@ -6,7 +6,7 @@
 </section>
 
 <template id="popular-card-template">
-  <li class="popular-products-item">
+  <li class="popular-products-item product-card">
     <div class="popular-products-item-image-container">
       <img
         src=""
@@ -33,9 +33,20 @@
         </li>
       </ul>
     </div>
-    <button type="button" class="popular-products-item-btn">
-      <svg class="popular-products-item-btn-icon" width="12" height="12">
-        <use href="img/icons.svg#cart-icon"></use>
+    <button type="button" class="popular-products-item-btn add-to-cart-btn">
+      <svg
+        class="popular-products-item-btn-icon icon-default"
+        width="12"
+        height="12"
+      >
+        <use href="img/icons.svg#icon-cart"></use>
+      </svg>
+      <svg
+        class="popular-products-item-btn-icon icon-active"
+        width="12"
+        height="12"
+      >
+        <use href="img/icons.svg#icon-check"></use>
       </svg>
     </button>
   </li>
