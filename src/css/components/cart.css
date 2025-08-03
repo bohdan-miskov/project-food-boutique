@@ -1,3 +1,4 @@
+/* #region Phone styles */
 .cart {
   padding-top: 54px;
   padding-bottom: 36px;
@@ -173,7 +174,9 @@
   font-size: 14px;
   line-height: 1.29;
 }
+/* #endregion */
 
+/* #region Tablet styles */
 @media only screen and (min-width: 768px) {
   .cart {
     padding-top: 76px;
@@ -254,7 +257,9 @@
     line-height: 1.33;
   }
 }
+/* #endregion */
 
+/* #region Desktop styles */
 @media only screen and (min-width: 1440px) {
   .main-cart-container {
     width: 1440px;
@@ -280,3 +285,4 @@
     padding-bottom: 50px;
   }
 }
+/* #endregion */

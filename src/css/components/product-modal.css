@@ -1,3 +1,4 @@
+/* #region Phone styles */
 .product-modal-window {
   width: 335px;
 }
@@ -85,7 +86,9 @@
 .product-modal-btn-icon {
   fill: var(--light-main-color);
 }
+/* #endregion */
 
+/* #region Tablet styles */
 @media only screen and (min-width: 768px) {
   .product-modal-window {
     width: 600px;
@@ -121,3 +124,4 @@
     font-size: 16px;
   }
 }
+/* #endregion */
