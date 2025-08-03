@@ -27,4 +27,7 @@ const initializeProductsCart = async () => {
   setSumOrder(sum);
 };
 
-await initializeProductsCart();
+document.addEventListener(
+  'DOMContentLoaded',
+  async () => await initializeProductsCart()
+);
