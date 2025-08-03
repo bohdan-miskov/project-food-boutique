@@ -1,3 +1,4 @@
+/* #region Phone styles */
 .order {
   padding-top: 36px;
   padding-bottom: 80px;
@@ -58,7 +59,9 @@
   width: 100%;
   color: var(--light-main-color);
 }
+/* #endregion */
 
+/* #region Tablet styles */
 @media only screen and (min-width: 768px) {
   .order {
     padding-top: 46px;
@@ -101,7 +104,9 @@
     line-height: 1.2;
   }
 }
+/* #endregion */
 
+/* #region Desktop styles */
 @media only screen and (min-width: 1440px) {
   .order {
     padding-top: 186px;
@@ -112,3 +117,4 @@
     width: 590px;
   }
 }
+/* #endregion */
