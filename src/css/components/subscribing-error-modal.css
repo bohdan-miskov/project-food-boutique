@@ -1,3 +1,4 @@
+/* #region Phone styles */
 .subscribing-error-modal-window {
   width: 335px;
 }
@@ -23,7 +24,9 @@
   font-size: 14px;
   line-height: 1.29;
 }
+/* #endregion */
 
+/* #region Tablet styles */
 @media only screen and (min-width: 768px) {
   .subscribing-error-modal-window {
     width: 469px;
@@ -41,3 +44,4 @@
     width: 349px;
   }
 }
+/* #endregion */
