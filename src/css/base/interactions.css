@@ -1,0 +1,66 @@
+.green-btn {
+  background-color: var(--accent-color);
+  transition: background-color 300ms ease-in;
+}
+.light-btn {
+  transition: color 300ms ease-in;
+}
+.add-to-cart-btn .icon-default {
+  display: block;
+}
+.add-to-cart-btn .icon-active {
+  display: none;
+  opacity: 0;
+}
+.social {
+  transition: background-color 300ms ease-in;
+}
+.light-input {
+  transition: border-color 300ms ease-in;
+}
+.product-card {
+  transition: transform 300ms ease-in;
+}
+
+@media (hover: hover) {
+  .green-btn:is(:hover, :focus):not(:disabled) {
+    background-color: var(--dark-accent-color);
+  }
+  .light-btn:is(:hover, :focus):not(:disabled) {
+    color: var(--accent-color);
+  }
+  .add-to-cart-btn:is(:hover, :focus):not(:disabled) .icon-default {
+    display: none;
+  }
+  .add-to-cart-btn:is(:hover, :focus):not(:disabled) .icon-active {
+    display: block;
+    animation: fadeCheck 0.5s ease-in-out forwards;
+  }
+  .social:is(:hover, :focus):not(:disabled) {
+    background-color: rgba(232, 232, 226, 0.2);
+  }
+  .light-input:is(:hover, :focus):not(:disabled) {
+    border-color: var(--accent-color);
+  }
+  .product-card:is(:hover, :focus):not(:disabled) {
+    transform: scale(105%);
+  }
+}
+
+@media (hover: none) {
+  .green-btn:is(:active):not(:disabled) {
+    background-color: var(--dark-accent-color);
+  }
+  .light-btn:is(:active):not(:disabled) {
+    color: var(--accent-color);
+  }
+  .social:is(:active):not(:disabled) {
+    background-color: rgba(232, 232, 226, 0.2);
+  }
+  .light-input:is(:active):not(:disabled) {
+    border-color: var(--accent-color);
+  }
+  .product-card:is(:active):not(:disabled) {
+    transform: scale(105%);
+  }
+}
