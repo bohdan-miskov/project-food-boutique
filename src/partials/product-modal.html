@@ -3,7 +3,7 @@
 <template id="product-modal-template">
   <div class="product-modal-window modal-window">
     <div class="product-modal-container modal-container">
-      <button type="button" class="modal-close-btn">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">
         <svg class="modal-close-btn-icon" width="22" height="22">
           <use href="img/icons.svg#icon-close"></use>
         </svg>
@@ -11,6 +11,7 @@
       <div class="product-modal-main">
         <div class="product-modal-image-container">
           <img
+            loading="lazy"
             src=""
             alt=""
             class="product-modal-image"
@@ -44,7 +45,11 @@
       </div>
       <div class="product-modal-footer">
         <p class="product-modal-price">$3.99</p>
-        <button type="button" class="product-modal-btn add-to-cart-btn">
+        <button
+          type="button"
+          class="product-modal-btn add-to-cart-btn"
+          aria-label="Add product to cart"
+        >
           <span class="product-modal-btn-text">Add to</span
           ><svg
             class="product-modal-btn-icon icon-default"

@@ -11,7 +11,11 @@
       </h2>
     </div>
     <div class="cart-products-container">
-      <button type="button" class="cart-products-delete-all-btn">
+      <button
+        type="button"
+        class="cart-products-delete-all-btn"
+        aria-label="Delete all products from cart"
+      >
         <span>Delete all</span>
         <svg class="cart-products-delete-all-icon" width="24" height="24">
           <use href="img/icons.svg#icon-close"></use>
@@ -26,6 +30,7 @@
           srcset="img/cart/cart-tab.webp 1x, img/cart/cart-tab@2x.webp 2x"
         />
         <img
+          loading="lazy"
           src="img/cart/cart-mob.webp"
           alt="Empty cart"
           srcset="img/cart/cart-mob.webp 1x, img/cart/cart-mob@2x.webp 2x"
@@ -49,6 +54,7 @@
   <li class="cart-products-item">
     <div class="cart-products-item-image-container">
       <img
+        loading="lazy"
         src=""
         alt=""
         class="cart-products-item-image"
@@ -74,7 +80,7 @@
           <button
             type="button"
             class="cart-products-item-qty-btn decrease"
-            aria-label="Зменшити кількість"
+            aria-label="Decrease quantity"
           >
             <svg class="cart-products-item-qty-icon" width="14" height="14">
               <use href="img/icons.svg#icon-minus"></use>
@@ -88,11 +94,12 @@
             max="99"
             aria-live="polite"
             aria-atomic="true"
+            aria-label="Set product quantity"
           />
           <button
             type="button"
             class="cart-products-item-qty-btn increase"
-            aria-label="Збільшити кількість"
+            aria-label="Increase quantity"
           >
             <svg class="cart-products-item-qty-icon" width="14" height="14">
               <use href="img/icons.svg#icon-plus"></use>
@@ -101,7 +108,11 @@
         </div>
       </div>
     </div>
-    <button type="button" class="cart-products-item-delete-btn">
+    <button
+      type="button"
+      class="cart-products-item-delete-btn"
+      aria-label="Delete this product from cart"
+    >
       <svg class="cart-products-item-delete-icon" width="18" height="18">
         <use href="img/icons.svg#icon-close"></use>
       </svg>

@@ -9,6 +9,7 @@
   <li class="popular-products-item product-card">
     <div class="popular-products-item-image-container">
       <img
+        loading="lazy"
         src=""
         alt=""
         class="popular-products-item-image"
@@ -33,7 +34,11 @@
         </li>
       </ul>
     </div>
-    <button type="button" class="popular-products-item-btn add-to-cart-btn">
+    <button
+      type="button"
+      class="popular-products-item-btn add-to-cart-btn"
+      aria-label="Add product to cart"
+    >
       <svg
         class="popular-products-item-btn-icon icon-default"
         width="12"
