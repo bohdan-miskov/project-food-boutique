@@ -4,14 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food Boutique</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Food Boutique is your online grocery store offering popular and discounted products. Explore catalogs, add items to your cart, place quick orders, and subscribe for useful store updates."
     />
-    <link rel="stylesheet" href="./css/catalog-page.css" />
+    <title>Food Boutique</title>
+    <link
+      rel="preload"
+      as="image"
+      href="./img/hero/hero-mob.webp"
+      media="(max-width: 767px) and (max-resolution: 1dppx)"
+      imagesrcset="./img/hero/hero-mob.webp 1x, ./img/hero/hero-mob@2x.webp 2x"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="./img/hero/hero-tab.webp"
+      media="(min-width: 768px) and (max-width: 1439px)"
+      imagesrcset="./img/hero/hero-tab.webp 1x, ./img/hero/hero-tab@2x.webp 2x"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/hero/hero-desk.webp"
+      media="(min-width: 1440px)"
+      imagesrcset="./img/hero/hero-desk.webp 1x, ./img/hero/hero-desk@2x.webp 2x"
+    />
+    <link rel="stylesheet" href="./css/pages/catalog-page.css" />
   </head>
   <body>
     <load src="./partials/header.html" />
@@ -34,6 +54,6 @@
     <load src="./partials/subscribing-thank-modal.html" />
     <load src="./partials/subscribing-error-modal.html" />
 
-    <script type="module" defer src="./catalog-page.ts"></script>
+    <script type="module" defer src="./pages/catalog.ts"></script>
   </body>
 </html>
