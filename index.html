@@ -4,39 +4,70 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/team-project-food-boutique/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Food Boutique is your online grocery store offering popular and discounted products. Explore catalogs, add items to your cart, place quick orders, and subscribe for useful store updates."
+    />
     <title>Food Boutique</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="image"
+      href="/team-project-food-boutique/assets/hero-mob-z7VZEtWb.webp"
+      media="(max-width: 767px) and (max-resolution: 1dppx)"
+      imagesrcset="./img/hero/hero-mob.webp 1x, ./img/hero/hero-mob@2x.webp 2x"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/team-project-food-boutique/assets/hero-tab-D8DICSox.webp"
+      media="(min-width: 768px) and (max-width: 1439px)"
+      imagesrcset="./img/hero/hero-tab.webp 1x, ./img/hero/hero-tab@2x.webp 2x"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/team-project-food-boutique/assets/hero-desk-CjgbeLrO.webp"
+      media="(min-width: 1440px)"
+      imagesrcset="./img/hero/hero-desk.webp 1x, ./img/hero/hero-desk@2x.webp 2x"
     />
     <script type="module" crossorigin src="/team-project-food-boutique/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/team-project-food-boutique/assets/vendor-Df9iwuFY.js">
-    <link rel="modulepreload" crossorigin href="/team-project-food-boutique/assets/footer-BOpFOAkR.js">
+    <link rel="modulepreload" crossorigin href="/team-project-food-boutique/assets/vendor-C7T_U3ZN.js">
+    <link rel="modulepreload" crossorigin href="/team-project-food-boutique/assets/footer-VhV54VbN.js">
     <link rel="stylesheet" crossorigin href="/team-project-food-boutique/assets/vendor-gcKlGt6x.css">
-    <link rel="stylesheet" crossorigin href="/team-project-food-boutique/assets/index-BSuCXyps.css">
+    <link rel="stylesheet" crossorigin href="/team-project-food-boutique/assets/index-fzAuxz0T.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
   <div class="container header-container">
-    <img
-      class="header-logo"
-      src="/team-project-food-boutique/assets/logo-DhgViPew.svg"
-      alt="logo"
-      width="154"
-      height="28"
-    />
+    <a href="../index.html" aria-label="Go to home page">
+      <img
+        loading="lazy"
+        class="header-logo"
+        src="/team-project-food-boutique/assets/logo-DhgViPew.svg"
+        alt="logo"
+        width="154"
+        height="28"
+    /></a>
     <nav class="header-nav">
       <ul class="header-nav-list">
         <li class="header-nav-item">
-          <a href="../index.html" class="header-nav-link">Home</a>
+          <a
+            href="../index.html"
+            class="header-nav-link green-btn"
+            aria-label="Go to home page"
+            >Home</a
+          >
         </li>
         <li class="header-nav-item">
-          <a href="../cart-page.html" class="header-nav-link">
-            <div class="header-nav-link-cart">
+          <a
+            href="../cart-page.html"
+            class="header-nav-link"
+            aria-label="Go to cart page"
+          >
+            <div class="header-nav-link-cart green-btn">
               <svg class="header-cart-icon" width="14" height="14">
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-cart"></use>
               </svg>
             </div>
             <p class="header-cart-info">
@@ -46,6 +77,15 @@
         </li>
       </ul>
     </nav>
+    <a
+      href="#header"
+      class="header-scroll-btn green-btn"
+      aria-label="Scroll to top"
+    >
+      <svg class="header-scroll-btn-icon" width="18" height="24">
+        <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-double-arrow-top"></use>
+      </svg>
+    </a>
   </div>
 </header>
 
@@ -80,6 +120,7 @@
         />
       </picture>
       <img
+        loading="lazy"
         src="/team-project-food-boutique/assets/hero-license-LELt4GfM.svg"
         alt="Organic food"
         class="hero-license-image"
@@ -96,25 +137,41 @@
     <form action="#" class="filters-form">
       <div class="filters-input-container">
         <input
-          class="filters-input"
+          class="filters-input light-input"
           type="text"
           name="searchQueryInput"
           placeholder="Search for anything"
         />
-        <button type="submit" class="filters-search-btn">
+        <button
+          type="submit"
+          class="filters-search-btn"
+          aria-label="Start searching products"
+        >
           <svg class="filters-search-icon" width="20" height="20">
-            <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#search-icon"></use>
+            <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-search"></use>
           </svg>
         </button>
       </div>
+      <label class="visually-hidden" for="filters-categories-select"
+        >Choose product category</label
+      >
       <select
-        class="filters-select"
+        class="filters-select light-input"
         id="filters-categories-select"
         name="categoriesSelect"
+        aria-label="Choose product category"
       >
         <option value="all" selected>Categories</option>
       </select>
-      <select class="filters-select" id="filters-sort-select" name="sortSelect">
+      <label class="visually-hidden" for="filters-sort-select"
+        >Choose products sort mode</label
+      >
+      <select
+        class="filters-select light-input"
+        id="filters-sort-select"
+        name="sortSelect"
+        aria-label="Choose products sort mode"
+      >
         <option value="popularity" selected>Popularity</option>
         <option value="alph_asc">A to Z</option>
         <option value="alph_desc">Z to A</option>
@@ -130,28 +187,46 @@
   <div class="container">
     <h2 class="products-title visually-hidden">Products catalog</h2>
     <ul class="products-list"></ul>
+    <div class="products-empty-container hidden">
+      <h3 class="products-empty-title">
+        Nothing was found for the selected
+        <span class="accent-text">filters...</span>
+      </h3>
+      <p class="products-empty-descr">
+        Try adjusting your search parameters or browse our range by other
+        criteria to find the perfect product for you.
+      </p>
+    </div>
     <ul class="products-pagination-container">
       <li class="products-pagination-side-item">
         <ul class="products-pagination-left-side">
           <li class="products-pagination-left-side-items">
-            <button type="button" class="product-pagination-nav-btn all">
+            <button
+              type="button"
+              class="product-pagination-nav-btn all green-btn"
+              aria-label="Go to the first page"
+            >
               <svg
                 class="product-pagination-nav-btn-icon"
                 width="24"
                 height="24"
               >
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-left-all-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-pagin-caret-left-all"></use>
               </svg>
             </button>
           </li>
           <li class="products-pagination-left-side-items">
-            <button type="button" class="product-pagination-nav-btn once">
+            <button
+              type="button"
+              class="product-pagination-nav-btn once green-btn"
+              aria-label="Go to the previous page"
+            >
               <svg
                 class="product-pagination-nav-btn-icon"
                 width="24"
                 height="24"
               >
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-left-once-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-pagin-caret-left-once"></use>
               </svg>
             </button>
           </li>
@@ -163,24 +238,32 @@
       <li class="products-pagination-side-item">
         <ul class="products-pagination-right-side">
           <li class="products-pagination-right-side-items">
-            <button type="button" class="product-pagination-nav-btn once">
+            <button
+              type="button"
+              class="product-pagination-nav-btn once green-btn"
+              aria-label="Go to the next page"
+            >
               <svg
                 class="product-pagination-nav-btn-icon"
                 width="24"
                 height="24"
               >
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-right-once-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-pagin-caret-right-once"></use>
               </svg>
             </button>
           </li>
           <li class="products-pagination-right-side-items">
-            <button type="button" class="product-pagination-nav-btn all">
+            <button
+              type="button"
+              class="product-pagination-nav-btn all green-btn"
+              aria-label="Go to the last page"
+            >
               <svg
                 class="product-pagination-nav-btn-icon"
                 width="24"
                 height="24"
               >
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#pagin-caret-right-all-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-pagin-caret-right-all"></use>
               </svg>
             </button>
           </li>
@@ -191,9 +274,16 @@
 </section>
 
 <template id="products-card-template">
-  <li class="products-item">
+  <li class="products-item product-card">
     <div class="products-item-image-container">
-      <img src="" alt="" class="products-item-image" width="140" height="140" />
+      <img
+        loading="lazy"
+        src=""
+        alt=""
+        class="products-item-image"
+        width="140"
+        height="140"
+      />
       <div class="products-item-discount"></div>
     </div>
     <h3 class="products-subtitle">Baby Plum Tomatoes</h3>
@@ -214,9 +304,16 @@
     </ul>
     <div class="products-item-footer">
       <p class="products-item-price">$3.99</p>
-      <button type="button" class="products-item-btn">
-        <svg class="products-item-btn-icon" width="18" height="18">
-          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+      <button
+        type="button"
+        class="products-item-btn add-to-cart-btn"
+        aria-label="Add product to cart"
+      >
+        <svg class="products-item-btn-icon icon-default" width="18" height="18">
+          <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-cart"></use>
+        </svg>
+        <svg class="products-item-btn-icon icon-active" width="18" height="18">
+          <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-check"></use>
         </svg>
       </button>
     </div>
@@ -232,9 +329,10 @@
 </section>
 
 <template id="popular-card-template">
-  <li class="popular-products-item">
+  <li class="popular-products-item product-card">
     <div class="popular-products-item-image-container">
       <img
+        loading="lazy"
         src=""
         alt=""
         class="popular-products-item-image"
@@ -259,9 +357,24 @@
         </li>
       </ul>
     </div>
-    <button type="button" class="popular-products-item-btn">
-      <svg class="popular-products-item-btn-icon" width="12" height="12">
-        <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+    <button
+      type="button"
+      class="popular-products-item-btn add-to-cart-btn"
+      aria-label="Add product to cart"
+    >
+      <svg
+        class="popular-products-item-btn-icon icon-default"
+        width="12"
+        height="12"
+      >
+        <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-cart"></use>
+      </svg>
+      <svg
+        class="popular-products-item-btn-icon icon-active"
+        width="12"
+        height="12"
+      >
+        <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-check"></use>
       </svg>
     </button>
   </li>
@@ -275,9 +388,10 @@
 </section>
 
 <template id="discount-card-template">
-  <li class="discount-products-item">
+  <li class="discount-products-item product-card">
     <div class="discount-products-item-image-container">
       <img
+        loading="lazy"
         src=""
         alt=""
         class="discount-products-item-image"
@@ -285,6 +399,7 @@
         height="140"
       />
       <img
+        loading="lazy"
         src="/team-project-food-boutique/assets/products-discount-B9KjsRQc.svg"
         alt="Discount"
         class="discount-products-item-discount-image"
@@ -297,9 +412,24 @@
 
       <div class="discount-products-item-buy-side">
         <p class="discount-products-item-price"></p>
-        <button type="button" class="discount-products-item-btn">
-          <svg class="discount-products-item-btn-icon" width="18" height="18">
-            <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+        <button
+          type="button"
+          class="discount-products-item-btn add-to-cart-btn"
+          aria-label="Add product to cart"
+        >
+          <svg
+            class="discount-products-item-btn-icon icon-default"
+            width="18"
+            height="18"
+          >
+            <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-cart"></use>
+          </svg>
+          <svg
+            class="discount-products-item-btn-icon icon-active"
+            width="18"
+            height="18"
+          >
+            <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-check"></use>
           </svg>
         </button>
       </div>
@@ -316,6 +446,7 @@
     <div class="footer-main-body">
       <div class="footer-logo-and-socials">
         <img
+          loading="lazy"
           src="/team-project-food-boutique/assets/footer-logo-Cwvi_Jjf.svg"
           class="footer-logo"
           alt="logo"
@@ -325,34 +456,40 @@
         <ul class="footer-socials-list">
           <li class="footer-socials-item">
             <a
-              class="footer-socials-link"
+              href="https://www.facebook.com/goITclub/"
+              class="footer-socials-link social"
+              aria-label="Go to our facebook page"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
               <svg class="footer-social-icon" width="24" height="24">
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#facebook-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="footer-socials-item">
             <a
-              class="footer-socials-link"
+              href="https://www.instagram.com/goitclub/"
+              class="footer-socials-link social"
+              aria-label="Go to our instagram page"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
               <svg class="footer-social-icon" width="24" height="24">
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#instagram-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="footer-socials-item">
             <a
-              class="footer-socials-link"
+              href="https://www.youtube.com/c/GoIT"
+              class="footer-socials-link social"
+              aria-label="Go to our youtube page"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
               <svg class="footer-social-icon" width="24" height="24">
-                <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#youtube-icon"></use>
+                <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -380,7 +517,9 @@
               pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
               required
             />
-            <button type="submit" class="footer-form-btn">Send</button>
+            <button type="submit" class="footer-form-btn light-btn">
+              Send
+            </button>
           </form>
         </div>
       </div>
@@ -400,14 +539,15 @@
 <template id="product-modal-template">
   <div class="product-modal-window modal-window">
     <div class="product-modal-container modal-container">
-      <button type="button" class="modal-close-btn">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">
         <svg class="modal-close-btn-icon" width="22" height="22">
-          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#close-icon"></use>
+          <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-close"></use>
         </svg>
       </button>
       <div class="product-modal-main">
         <div class="product-modal-image-container">
           <img
+            loading="lazy"
             src=""
             alt=""
             class="product-modal-image"
@@ -441,10 +581,25 @@
       </div>
       <div class="product-modal-footer">
         <p class="product-modal-price">$3.99</p>
-        <button type="button" class="product-modal-btn">
+        <button
+          type="button"
+          class="product-modal-btn add-to-cart-btn"
+          aria-label="Add product to cart"
+        >
           <span class="product-modal-btn-text">Add to</span
-          ><svg class="product-modal-btn-icon" width="18" height="18">
-            <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#cart-icon"></use>
+          ><svg
+            class="product-modal-btn-icon icon-default"
+            width="18"
+            height="18"
+          >
+            <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-cart"></use>
+          </svg>
+          <svg
+            class="product-modal-btn-icon icon-active"
+            width="18"
+            height="18"
+          >
+            <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-check"></use>
           </svg>
         </button>
       </div>
@@ -455,9 +610,9 @@
     <div class="modal-backdrop subscribing-thank-modal-backdrop">
   <div class="subscribing-thank-modal-window modal-window">
     <div class="subscribing-thank-modal-container modal-container">
-      <button type="button" class="modal-close-btn">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">
         <svg class="modal-close-btn-icon" width="22" height="22">
-          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#close-icon"></use>
+          <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-close"></use>
         </svg>
       </button>
       <h2 class="subscribing-thank-modal-title">
@@ -475,6 +630,7 @@
         />
 
         <img
+          loading="lazy"
           src="/team-project-food-boutique/assets/subscribing-mob-BNDgTBBS.webp"
           srcset="/team-project-food-boutique/assets/subscribing-mob-BNDgTBBS.webp 1x, /team-project-food-boutique/assets/subscribing-mob@2x-DLN8Afj9.webp 2x"
           alt="Cart of food"
@@ -490,9 +646,9 @@
     <div class="modal-backdrop subscribing-error-modal-backdrop">
   <div class="subscribing-error-modal-window modal-window">
     <div class="subscribing-error-modal-container modal-container">
-      <button type="button" class="modal-close-btn">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">
         <svg class="modal-close-btn-icon" width="22" height="22">
-          <use href="/team-project-food-boutique/assets/icons-BZqwHQYq.svg#close-icon"></use>
+          <use href="/team-project-food-boutique/assets/icons-DTTg0Qat.svg#icon-close"></use>
         </svg>
       </button>
       <h2 class="subscribing-error-modal-title">
