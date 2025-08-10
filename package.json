@@ -1,16 +1,17 @@
 {
-  "name": "vanilla-app-template",
+  "name": "project-food-boutique",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build --base=/team-project-food-boutique/",
+    "build": "tsc && vite build --base=/project-food-boutique/",
     "preview": "vite preview",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint \"**/*.css\" --fix"
   },
   "devDependencies": {
+    "@types/node": "^24.2.1",
     "eslint": "^9.30.0",
     "glob": "^11.0.0",
     "postcss": "^8.4.41",
